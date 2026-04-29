@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>EduTrack Portal</h1>
+        <ul>
+            <li><button onclick="showSection('results')">Exam Results</button></li>
+            <li><button onclick="showSection('syllabus')">Syllabus</button></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="results" class="content-section">
+            <h2>Add Exam Results</h2>
+            <form id="resultForm">
+                <input type="text" id="subject" placeholder="Subject Name" required>
+                <input type="number" id="marks" placeholder="Marks Obtained" required>
+                <button type="submit">Save Result</button>
+            </form>
+            <h3>Saved Marks</h3>
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Marks</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsBody"></tbody>
+            </table>
+        </section>
+
+        <section id="syllabus" class="content-section" style="display:none;">
+            <h2>Course Syllabus</h2>
+            <div class="syllabus-card">
+                <h3>Mathematics</h3>
+                <p>Calculus, Linear Algebra, Probability.</p>
+            </div>
+            <div class="syllabus-card">
+                <h3>Physics</h3>
+                <p>Thermodynamics, Quantum Mechanics, Optics.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
